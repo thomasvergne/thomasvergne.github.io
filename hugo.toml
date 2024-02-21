@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://sisypheus.dev'
 languageCode = 'fr'
 title = 'Sisypheus'
 theme = 'mini'
