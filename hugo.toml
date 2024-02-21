@@ -1,0 +1,36 @@
+baseURL = 'https://example.org/'
+languageCode = 'fr'
+title = 'Sisypheus'
+theme = 'mini'
+defaultContentLanguage = "fr"
+
+# Site parameters
+[params]
+# Site Author
+author = 'Sisypheus'
+bio = 'Concepteur and designer de langages de programmation'
+description = ''
+
+
+# Author biography
+# Site Description, used in HTML meat
+###########################################
+# Optional Configuration
+###########################################
+
+# To enable RSS, you could set `enableRSS: true`, default is `true`
+enableRSS = true
+# To enable table of content, you could set `showToc: true`, default is `false`
+showToc = true
+# To hidden powerBy message in the page footer, you could set: `showPowerBy: false`, default is `true`
+showPowerBy = false
+# To enable math typesetting , you could set `math: true`, default is `false`
+math = true
+# To hidden post summary in home page, you could set `hiddenPostSummaryInHomePage: true`, default is `false`
+hiddenPostSummaryInHomePage = false
+
+# Extra links in navigation
+# links:
+## e.g.
+# - name: Project
+#   path: /project
