@@ -17,6 +17,9 @@ hasCJKLanguage = true
     endLevel = 3
     ordered = false
     startLevel = 2
+[markup.goldmark]
+[markup.goldmark.renderer]
+    unsafe = true
 
 
 # Social links in footer, support github,twitter,stackoverflow,facebook
