@@ -2,7 +2,7 @@
 {{ partial "profile.html" . }}
 
 <section id="archive">
-   
+
     {{ range .Data.Pages.GroupByDate "2006" }}
         <div class="group">
             <h3 class="key">
@@ -15,7 +15,7 @@
                       <time datetime="{{ .PublishDate }}">{{ i18n "publishDateShort" . }}</time>
                   </div>
                   <div class="title">
-                      <a href="{{ .Permalink }}">
+                      <a href="{{ .RelPermalink }}">
                           {{ .Title }}
                       </a>
 
@@ -28,7 +28,7 @@
                       {{ end}}
                   </div>
                 </div>
-            {{ end }}          
+            {{ end }}
         </div>
 
     {{ end }}
