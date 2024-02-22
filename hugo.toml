@@ -9,8 +9,7 @@ defaultContentLanguage = "fr"
 # Site Author
 author = 'Sisypheus'
 bio = 'Concepteur and designer de langages de programmation'
-description = ''
-
+description = "Je suis un développeur Haskell passionné par le design et la conception de langages de programmation. J'écris des articles sur ces sujets et sur la programmation fonctionnelle en général."
 
 # Author biography
 # Site Description, used in HTML meat
