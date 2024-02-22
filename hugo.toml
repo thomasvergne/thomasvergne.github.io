@@ -14,9 +14,9 @@ hasCJKLanguage = true
     guessSyntax = true
     style = "emacs"
 [markup.tableOfContents]
-    endLevel = 3
+    endLevel = 5
     ordered = false
-    startLevel = 2
+    startLevel = 1
 [markup.goldmark]
 [markup.goldmark.renderer]
     unsafe = true
