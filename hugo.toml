@@ -4,6 +4,26 @@ title = 'Sisypheus'
 theme = 'mini'
 defaultContentLanguage = "fr"
 
+paginate = 3
+hasCJKLanguage = true
+
+# Hugo Configure Markup
+# More info: https://gohugo.io/getting-started/configuration-markup#
+[markup]
+[markup.highlight]
+    guessSyntax = true
+    style = "emacs"
+[markup.tableOfContents]
+    endLevel = 3
+    ordered = false
+    startLevel = 2
+
+
+# Social links in footer, support github,twitter,stackoverflow,facebook
+[social]
+  # e.g.
+github = "https://github.com/sisypheus-dev"
+
 # Site parameters
 [params]
 # Site Author
@@ -26,7 +46,7 @@ showPowerBy = false
 # To enable math typesetting , you could set `math: true`, default is `false`
 math = true
 # To hidden post summary in home page, you could set `hiddenPostSummaryInHomePage: true`, default is `false`
-hiddenPostSummaryInHomePage = false
+hiddenPostSummaryInHomePage = true
 
 # Extra links in navigation
 # links:
