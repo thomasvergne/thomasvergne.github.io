@@ -85,7 +85,7 @@ Contributions are what make the open source community such an amazing place to b
 
 ## License
 
-Distributed under the MIT License. See [LICENSE](https://github.com/sisypheus-dev/sisypheus-dev.github.io/blob/main/LICENSE.md) for more information.
+Distributed under the MIT License. See [LICENSE](https://github.com/sisypheus-dev/sisypheus-dev.github.io/blob/main/LICENSE) for more information.
 
 ## Authors
 
