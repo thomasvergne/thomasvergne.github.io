@@ -6,25 +6,26 @@ defaultContentLanguage = "fr"
 
 paginate = 3
 hasCJKLanguage = true
+ignorefiles = ["_archives"]
 
 # Hugo Configure Markup
 # More info: https://gohugo.io/getting-started/configuration-markup#
 [markup]
 [markup.highlight]
-    guessSyntax = true
-    style = "emacs"
+guessSyntax = true
+style = "emacs"
 [markup.tableOfContents]
-    endLevel = 5
-    ordered = false
-    startLevel = 1
+endLevel = 5
+ordered = false
+startLevel = 1
 [markup.goldmark]
 [markup.goldmark.renderer]
-    unsafe = true
+unsafe = true
 
 
 # Social links in footer, support github,twitter,stackoverflow,facebook
 [social]
-  # e.g.
+# e.g.
 github = "https://github.com/sisypheus-dev"
 
 # Site parameters
