@@ -315,20 +315,26 @@ nav.navigation a.button {
 
 #list-page .item {
     margin: 12px 0;
+    display: flex;
 }
 
 #list-page .title {
-    display: inline-block;
     color: #404040;
     font-size: 20px;
     font-weight: 400;
+    display: flex;
+    align-items: center;
     margin: 0;
-    width: 80%;
+}
+
+#list-page .item div {
+    display: flex;
+    flex: 1 1 auto;
+    gap: 1rem;
 }
 
 #list-page .title a {
     color: #404040;
-    display: block;
 }
 
 #list-page .title a:hover {
@@ -336,11 +342,12 @@ nav.navigation a.button {
 }
 
 #list-page .date {
-    width: 20%;
-    float: right;
+    display: flex;
+    flex: 0 1 auto;
     text-align: right;
     position: relative;
-    top: 4px;
+    align-items: center;
+    justify-content: end;
     color: #bbb;
 }
 
