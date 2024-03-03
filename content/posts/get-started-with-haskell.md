@@ -4,7 +4,7 @@ date = 2024-03-03T17:38:41+01:00
 draft = false
 description = "Beaucoup d'implémentations d'algorithmes dans des compilateurs sont aujourd'hui écrites en Haskell. Malgré sa syntaxe parfois cryptique et effrayante, il est nécessaire de le comprendre pour mieux appréhender certains concepts théoriques de l'informatique"
 author = "Sisypheus"
-tags = ["haskell", "functional programming", "get started"]
+tags = ["haskell", "programmation fonctionnelle", "monades", "système de type"]
 +++
 
 Haskell est un langage de programmation assez atypique par rapport à la majorité des langages adoptés par les développeurs. Effectivement, on le remarque par sa syntaxe, ou par certaines de ses fonctionnalités qui peuvent paraître étranges. Cependant, comprendre le Haskell permet souvent à la fois de mieux comprendre certains concepts ou algorithmes de l'informatique théorique et permet aussi de préparer un bon terrain d'expérimentation et d'entraînement sur les compilateurs.
