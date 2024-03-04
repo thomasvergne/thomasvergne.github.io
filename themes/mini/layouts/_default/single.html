@@ -1,25 +1,28 @@
 {{ define "main" }}
 
 <section id="single">
+    {{ with .Params.cover }}
+        <div class="cover">
+            <img src="{{ .image | absURL }}" alt="{{ .alt }}">
+            <span></span>
+        </div>
+    {{ end }}
+
     <h1 class="title">{{ .Title }}</h1>
+
+    {{ with .Params.subtitle }}
+        <div class="subtitle">{{ . }}</div>
+    {{ end }}
+
+    {{ with .Params.description }}
+        <div class="description">{{ . }}</div>
+    {{ end }}
 
     <div class="tip">
         <time datetime="{{ .PublishDate }}">{{ i18n "publishDateFull" . }}</time>
-        <span class="split">
-          ·
-        </span>
-        <span>
-          {{ i18n "wordCount" . }}
-        </span>
-        <span class="split">
-          ·
-        </span>
-        <span>
-          {{ i18n "minuteRead" . }}
-        </span>
     </div>
 
-    
+
     {{ if or .Site.Params.showToc .Params.showToc }}
         {{ partial "toc.html" . }}
     {{ end }}
@@ -36,10 +39,9 @@
             {{ end }}
         </div>
     {{ end}}
-    
+
     {{ partial "comment.html" . }}
 
 </section>
 
 {{ end }}
-
