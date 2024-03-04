@@ -1,7 +1,27 @@
 <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">    
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width,minimum-scale=1">
-<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
+<meta name="title" content="Sisypheus" />
+<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}" />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://sisypheus.dev/" />
+<meta property="og:title" content="Sisypheus" />
+<meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}" />
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content="https://sisypheus.dev/" />
+<meta property="twitter:title" content="Sisypheus" />
+<meta property="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}" />
+
+{{ with .Params.cover }}
+<meta property="twitter:image" content="{{ .image | absURL }}" />
+<meta property="og:image" content="{{ .image | absURL }}" />
+
+{{ end }}
+
 {{ hugo.Generator }}
 {{/* NOTE: For Production make sure you add `HUGO_ENV="production"` before your build command */}}
 {{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
@@ -24,7 +44,7 @@
 
 <link rel="shortcut icon" href="{{ "/images/favicon.ico" | relURL }}" type="image/x-icon" />
 
-{{ if .Site.Params.enableGoogleAnalytics }} 
+{{ if .Site.Params.enableGoogleAnalytics }}
   {{ template "_internal/google_analytics.html" . }}
 {{ end }}
 
