@@ -52,6 +52,11 @@ math = true
 # To hidden post summary in home page, you could set `hiddenPostSummaryInHomePage: true`, default is `false`
 hiddenPostSummaryInHomePage = true
 
+[cover]
+hidden = false         # hide everywhere but not in structured data
+hiddenInList = false   # hide on list pages and home
+hiddenInSingle = false # hide on single page
+
 # Extra links in navigation
 # links:
 ## e.g.
