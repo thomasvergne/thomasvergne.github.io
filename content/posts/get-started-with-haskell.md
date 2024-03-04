@@ -5,6 +5,11 @@ draft = false
 description = "Beaucoup d'implémentations d'algorithmes dans des compilateurs sont aujourd'hui écrites en Haskell. Malgré sa syntaxe parfois cryptique et effrayante, il est nécessaire de le comprendre pour mieux appréhender certains concepts théoriques de l'informatique"
 author = "Sisypheus"
 tags = ["haskell", "programmation fonctionnelle", "monades", "système de type"]
+
+[cover]
+image = "articles/get-started-with-haskell.png"
+alt = "Un code Haskell"
+caption = "Un code Haskell"
 +++
 
 Haskell est un langage de programmation assez atypique par rapport à la majorité des langages adoptés par les développeurs. Effectivement, on le remarque par sa syntaxe, ou par certaines de ses fonctionnalités qui peuvent paraître étranges. Cependant, comprendre le Haskell permet souvent à la fois de mieux comprendre certains concepts ou algorithmes de l'informatique théorique et permet aussi de préparer un bon terrain d'expérimentation et d'entraînement sur les compilateurs.
@@ -238,6 +243,19 @@ instance (Eq a) => Eq (Maybe a) where
 ```
 
 Vous avez sûrement remarqué, mais on a utilisé une contrainte de type `Eq a` pour la méthode `==`. C'est tout à fait possible et c'est même très courant. Cela permet de dire que pour que `Maybe a` soit égal à `Maybe b`, il faut que `a` soit égal à `b`. C'est une sorte d'assertion sur le type `a`.
+
+#### Les instances dérivées automatiques
+
+Lorsqu'on commenceà produire beaucoup de code, on veut parfois s'épargner certaines instances de typeclasses qui sont évidentes. Par exemple, on pourrait vouloir de cette façon dire au compilateur que le type qu'on a créé est une instance de `Eq` sans devoir lui spécifier comment il doit comparer les éléments. C'est ce que permet Haskell avec les instances dérivées automatiques. On peut par exemple définir un type `Person` :
+
+```haskell
+data Person = Person { name :: String, age :: Int }
+  deriving (Eq)
+```
+
+Ici, on a défini un type `Person` qui est une instance de `Eq`. Haskell va donc automatiquement générer une instance de `Eq` pour le type `Person` en utilisant les champs `name` et `age` pour comparer les éléments.
+
+On peut faire de même avec d'autres instances de base généralement comme `Show` ou `Read`.
 
 ## La programmation monadique
 
