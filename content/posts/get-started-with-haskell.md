@@ -408,7 +408,7 @@ main = do
   print (f 6) -- affiche "9"
 ```
 
-### Les records
+### Les records
 
 Les records sont une manière de définir des types de données avec des champs nommés. Ils sont très utilisés en Haskell pour définir des types de données complexes et structurés :
 
@@ -438,7 +438,7 @@ printPerson (Person { name = n, age = a, email = e }) = do
   putStrLn $ "Email: " ++ e
 ```
 
-### Les applications (ou calls) de fonctions
+### Les applications (ou calls) de fonctions
 
 Haskell est un des rares langages à automatiquement curryfier les fonctions, c'est-à-dire à transformer les fonctions à plusieurs arguments en une suite de fonctions à un seul argument. Cela permet de pouvoir appliquer partiellement des fonctions, c'est-à-dire de ne pas fournir tous les arguments d'une fonction pour obtenir une nouvelle fonction qui attend les arguments restants. Cela permet entre autres de créer des fonctions plus modulables.
 
@@ -480,7 +480,7 @@ Ou même pour faire de l'application "partielle" directement totale ensuite :
 (add 1 :: Int -> Int) 2 :: Int
 ```
 
-### Les fonctions d'un point de vue type
+### Les fonctions d'un point de vue type
 
 En Haskell, pour typer une fonction on utilise l'opérateur type-level `(->)` qui est utilisé de la façon suivante : `a -> b` où `a` est le type de l'argument de la fonction et `b` le type de retour. Reprenons l'exemple de la fonction `add` :
 
@@ -508,7 +508,7 @@ On a vu précédemment que les monades sont des types de données qui permettent
 
 Jusqu'à présent, nous avons surtout conçu du code Haskell qui était immuable. On pourrait faire cela pour tous les programmes possibles et imaginables, mais ce n'est pas réellement pratique dans la réalité. En effet, avoir de la mutabilité ou du moins quelque chose qui s'en approche, pourrait se révéler très utile pour avoir des programmes plus élégants. C'est là qu'interviennent certains types de données dont `State`.
 
-### Le type `State`
+### Le type `State`
 
 Le type `State` est un type de données qui permet de gérer de la mutabilité de façon à n'avoir aucun effet de bord. Parfait non ? On combine tous les avantages de la programmation fonctionnelle pure avec ceux de la programmation impérative mutable !
 
@@ -547,7 +547,7 @@ modify f = State $ \s -> ((), f s)
 
 Maintenant que l'on a nos fonctions pour manipuler des états, on peut les combiner pour créer des actions plus complexes, notamment en implémentant `Functor`, `Applicative` et `Monad` pour `State`.
 
-#### `Functor`, `Applicative` et `Monad` pour `State`
+#### `Functor`, `Applicative` et `Monad` pour `State`
 
 On peut implémenter `Functor`, `Applicative` et `Monad` pour `State` de la façon suivante :
 
@@ -577,7 +577,7 @@ instance Monad (State s) where
 
 Ce qu'il faut retenir sur ces implémentations par rapport à `State`, c'est que dans tous les cas, on recrée un nouvel état à chaque action. Ce nouvel état se base constamment sur le précédent. C'est comme cela qu'on simule la mutabilité. Maintenant qu'on a fait tout le travail pour `State`, on peut passer à des exemples concrets.
 
-#### Exemple concret de `State`, la stack
+#### Exemple concret de `State`, la stack
 
 On peut utiliser `State` pour implémenter une stack. On peut définir une stack de la façon suivante :
 
