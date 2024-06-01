@@ -3,7 +3,7 @@ title = 'Haskell - Comprendre pour mieux appréhender !'
 date = 2024-03-03T17:38:41+01:00
 draft = false
 description = "Beaucoup d'implémentations d'algorithmes dans des compilateurs sont aujourd'hui écrites en Haskell. Malgré sa syntaxe parfois cryptique et effrayante, il est nécessaire de le comprendre pour mieux appréhender certains concepts théoriques de l'informatique"
-author = "Sisypheus"
+author = "Thomas Vergne"
 tags = ["haskell", "programmation fonctionnelle", "monades", "système de type"]
 
 [cover]

@@ -2,7 +2,7 @@ baseURL = 'https://thomas-vergne.fr'
 languageCode = 'fr'
 title = 'Thomas Vergne'
 theme = 'mini'
-defaultContentLanguage = "en"
+defaultContentLanguage = "fr"
 
 paginate = 3
 hasCJKLanguage = true

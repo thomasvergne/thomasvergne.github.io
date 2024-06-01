@@ -1,7 +1,7 @@
 +++
 title = "Types et valeurs"
 date = 2024-02-22T12:33:30+01:00
-author = "Sisypheus"
+author = "Thomas Vergne"
 description = "Comprendre et appréhender les types et les valeurs en Haskell"
 tags = ["haskell", "functional programming"]
 +++
@@ -51,7 +51,7 @@ data Personne = Personne {- prénom -} String {- âge -} Int
 Dans cet exemple, on définit un type `Personne` qui est composé de deux champs : un champ `prénom` de type `String` et un champ `âge` de type `Int`. On peut alors créer des valeurs de type `Personne` de la manière suivante :
 
 ```haskell
-p1 = Personne "Sisypheus" 24
+p1 = Personne "Thomas Vergne" 24
 p2 = Personne "John" 42
 ```
 
@@ -66,7 +66,7 @@ main = do
 On obtiendra le résultat suivant :
 
 ```
-Personne "Sisypheus" 24
+Personne "Thomas Vergne" 24
 Personne "John" 42
 ```
 

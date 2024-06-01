@@ -1,12 +1,12 @@
 +++
 title = "À propos"
-description = "Sisypheus - Un concepteur et designer de langages de programmation"
+description = "Thomas Vergne - Un concepteur et designer de langages de programmation"
 date = 2024-02-21T12:24:46+01:00
 aliases = ["about", "contact"]
-author = "Sisypheus"
+author = "Thomas Vergne"
 +++
 
-# Salut, je suis Sisypheus
+# Salut, je suis Thomas Vergne
 
 Je suis un concepteur et designer de langages de programmation depuis à peu près quatre ans. J'éprouve donc principalement de l'intérêt pour la compilation. Mais je m'intéresse aussi au paradigme fonctionnel en informatique ainsi qu'à certains domaines des mathématiques comme la théorie des catégories.
 

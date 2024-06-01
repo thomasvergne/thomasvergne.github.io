@@ -3,7 +3,7 @@ title = 'Gérer simplement le parsing dans son langage'
 date = 2024-03-03T17:38:41+01:00
 draft = false
 description = "Le parsing est souvent une étape qui à tort peut arrêter nombreux de novices dans leur quête de création de langage. Pourtant, il existe des solutions simples et toutefois efficaces pour gérer cette étape."
-author = "Sisypheus"
+author = "Thomas Vergne"
 tags = ["programmation fonctionnelle", "monades", "parser combinators", "parsers"]
 +++
 
@@ -42,7 +42,7 @@ type Parser<A> = (input: string) => [Either<string, A>, string]
 
 ### Quelques fonctions importantes
 
-C'est bien beau d'avoir notre type, mais maintenant, il faut pouvoir opérer dessus facilement afin de pouvoir commencer à construire nos premiers parsers. Pour cela, nous allons écrire les instances de [`Functor`, `Applicative`, `Monad` et `Alternative` pour notre type `Parser`](https://sisypheus.dev/posts/get-started-with-haskell/#la-programmation-monadique).
+C'est bien beau d'avoir notre type, mais maintenant, il faut pouvoir opérer dessus facilement afin de pouvoir commencer à construire nos premiers parsers. Pour cela, nous allons écrire les instances de [`Functor`, `Applicative`, `Monad` et `Alternative` pour notre type `Parser`](https://thomas-vergne.fr/posts/get-started-with-haskell/#la-programmation-monadique).
 
 ```haskell
 instance Functor Parser where

@@ -3,7 +3,7 @@ title = 'La syntaxe de Haskell'
 date = 2024-02-23T09:28:31+01:00
 description = "Lire et déchiffrer la syntaxe cryptique de Haskell"
 draft = false
-author = "Sisypheus"
+author = "Thomas Vergne"
 +++
 
 Comme dit dans l'article précédent, Haskell est un langage original qui sait se démarquer par sa syntaxe souvent sujet à des plaisanteries. Effectivement, elle peut paraître aux premiers abords relativement cryptique et difficile à lire. Cependant, ce n'est qu'une question d'habitude ainsi que de prendre son temps pour comprendre ce que chaque élément du code signifie.
