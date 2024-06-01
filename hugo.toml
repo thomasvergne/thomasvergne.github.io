@@ -1,8 +1,8 @@
-baseURL = 'https://sisypheus.dev'
+baseURL = 'https://thomas-vergne.fr'
 languageCode = 'fr'
-title = 'Sisypheus'
+title = 'Thomas Vergne'
 theme = 'mini'
-defaultContentLanguage = "fr"
+defaultContentLanguage = "en"
 
 paginate = 3
 hasCJKLanguage = true
@@ -13,7 +13,7 @@ ignorefiles = ["_archives"]
 [markup]
 [markup.highlight]
 guessSyntax = true
-style = "emacs"
+style = "github-dark"
 [markup.tableOfContents]
 endLevel = 5
 ordered = false
@@ -26,7 +26,7 @@ unsafe = true
 # Social links in footer, support github,twitter,stackoverflow,facebook
 [social]
 # e.g.
-github = "https://github.com/sisypheus-dev"
+github = "https://github.com/thomasvergne"
 
 # Site parameters
 [params]
