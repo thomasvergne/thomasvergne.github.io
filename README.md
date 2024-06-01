@@ -1,6 +1,6 @@
 <br/>
 <p align="center">
-  <h3 align="center">Sisypheus Blog</h3>
+  <h3 align="center">Thomas Vergne Blog</h3>
 
   <p align="center">
     A blog written with Hugo and extended with Mini theme
@@ -9,15 +9,15 @@
     <a href="https://gohugo.io/documentation/"><strong>Explore the docs »</strong></a>
     <br/>
     <br/>
-    <a href="sisypheus.dev">View Demo</a>
+    <a href="thomas-vergne.fr">View Demo</a>
     .
-    <a href="https://github.com/sisypheus-dev/sisypheus-dev.github.io/issues">Report Bug</a>
+    <a href="https://github.com/thomasvergne/thomasvergne.github.io/issues">Report Bug</a>
     .
-    <a href="https://github.com/sisypheus-dev/sisypheus-dev.github.io/issues">Request Feature</a>
+    <a href="https://github.com/thomasvergne/thomasvergne.github.io/issues">Request Feature</a>
   </p>
 </p>
 
-![Contributors](https://img.shields.io/github/contributors/sisypheus-dev/sisypheus-dev.github.io?color=dark-green) ![Forks](https://img.shields.io/github/forks/sisypheus-dev/sisypheus-dev.github.io?style=social) ![Stargazers](https://img.shields.io/github/stars/sisypheus-dev/sisypheus-dev.github.io?style=social) ![Issues](https://img.shields.io/github/issues/sisypheus-dev/sisypheus-dev.github.io) ![License](https://img.shields.io/github/license/sisypheus-dev/sisypheus-dev.github.io)
+![Contributors](https://img.shields.io/github/contributors/thomasvergne/thomasvergne.github.io?color=dark-green) ![Forks](https://img.shields.io/github/forks/thomasvergne/thomasvergne.github.io?style=social) ![Stargazers](https://img.shields.io/github/stars/thomasvergne/thomasvergne.github.io?style=social) ![Issues](https://img.shields.io/github/issues/thomasvergne/thomasvergne.github.io) ![License](https://img.shields.io/github/license/thomasvergne/thomasvergne.github.io)
 
 ## Table Of Contents
 
@@ -53,7 +53,7 @@ This is an example of how to list things you need to use the software and how to
 1. Clone the repo
 
 ```sh
-git clone https://github.com/sisypheus-dev/sisypheus-dev.github.io
+git clone https://github.com/thomasvergne/thomasvergne.github.io
 ```
 
 2. Run the website
@@ -65,15 +65,15 @@ hugo server
 
 ## Roadmap
 
-See the [open issues](https://github.com/sisypheus-dev/sisypheus-dev.github.io/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/thomasvergne/thomasvergne.github.io/issues) for a list of proposed features (and known issues).
 
 ## Contributing
 
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-* If you have suggestions for adding or removing projects, feel free to [open an issue](https://github.com/sisypheus-dev/sisypheus-dev.github.io/issues/new) to discuss it, or directly create a pull request after you edit the *README.md* file with necessary changes.
+* If you have suggestions for adding or removing projects, feel free to [open an issue](https://github.com/thomasvergne/thomasvergne.github.io/issues/new) to discuss it, or directly create a pull request after you edit the *README.md* file with necessary changes.
 * Please make sure you check your spelling and grammar.
 * Create individual PR for each suggestion.
-* Please also read through the [Code Of Conduct](https://github.com/sisypheus-dev/sisypheus-dev.github.io/blob/main/CODE_OF_CONDUCT.md) before posting your first idea as well.
+* Please also read through the [Code Of Conduct](https://github.com/thomasvergne/thomasvergne.github.io/blob/main/CODE_OF_CONDUCT.md) before posting your first idea as well.
 
 ### Creating A Pull Request
 
@@ -85,8 +85,8 @@ Contributions are what make the open source community such an amazing place to b
 
 ## License
 
-Distributed under the MIT License. See [LICENSE](https://github.com/sisypheus-dev/sisypheus-dev.github.io/blob/main/LICENSE) for more information.
+Distributed under the MIT License. See [LICENSE](https://github.com/thomasvergne/thomasvergne.github.io/blob/main/LICENSE) for more information.
 
 ## Authors
 
-* **Sisypheus** - *Programming language enthusiast* - [Sisypheus](https://github.com/sisypheus/) - *Built and wrote the blog*
+* **Thomas Vergne** - *Programming language enthusiast* - [Thomas Vergne](https://github.com/Thomas Vergne/) - *Built and wrote the blog*
