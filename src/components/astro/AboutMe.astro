@@ -1,0 +1,32 @@
+---
+import { Image } from "astro:assets";
+---
+
+<section class="grid lg:grid-cols-2 place-items-center relative overflow-y-hidden my-32 border-y border-white/10 bg-white/[0.02] z-10">
+  <div class="max-w-md mx-auto py-48">
+    <Image height="128" width="128" src="/picture.png" class="size-32" alt="" />
+    <h2 class="text-gradient text-4xl max-w-lg mx-auto mt-8 text-left">
+      Dans les coulisses
+    </h2>
+    
+    <h3 class="text-white/70 text-2xl font-medium my-4 text-left">
+      Je suis Thomas Vergne,
+    </h3>
+
+    <p class="text-white/50 mt-4 text-justify">
+      Un développeur web passionné. Basé en France et actuellement étudiant en informatique, ma fascination pour les mathématiques alimente mon approche analytique et créative du développement.
+      <br><br>
+      Entre deux projets web, vous me trouverez souvent plongé dans la création de nouveaux langages de programmation, une passion qui me permet d'explorer les limites de l'innovation technologique.
+      <br><br>
+      Rejoignez-moi dans cette aventure où le code rencontre les mathématiques, et où chaque ligne écrite est une nouvelle opportunité de redéfinir ce qui est possible.
+    </p>
+
+    <button class="bg-white/[0.03] border border-white/[0.05] text-white/40 py-3 px-6 hover:text-white/60 hover:bg-white/[0.05] hover:border-white/10 transition-all duration-300 mt-6 w-full">
+      Prendre contact
+    </button>
+  </div>
+
+  <div class="absolute max-lg:bottom-0 lg:relative lg:col-span-1 h-64 lg:h-full w-full -z-10">
+    <span class="absolute lg:right-0 lg:top-0 bottom-0 left-0 h-full w-full bg-gradient-to-l from-yellow-500 to-green-500 -z-10 blur-[200px] opacity-50"></span>
+  </div>
+</section>

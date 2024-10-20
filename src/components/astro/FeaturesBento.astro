@@ -1,0 +1,69 @@
+---
+import { Image } from "astro:assets";
+
+
+---
+
+<section class="max-lg:p-8">
+  <h2 class="text-gradient text-4xl max-w-lg mx-auto text-center mt-32">
+    Créer des expériences inoubliables
+  </h2>
+
+  <p class="text-neutral-400/70 mt-8 text-center text-lg">
+    Quelle est la recette magique à une expérience utilisateur réussie ?
+  </p>
+
+  <div class="grid lg:grid-cols-2 lg:grid-rows-2 max-w-7xl mx-auto gap-8 mt-16">
+    <div class="bg-neutral-900 p-8 rounded-3xl lg:row-span-2 border-white/10 border opacity-50 hover:opacity-100 transition-opacity duration-500">
+      <Image width={256} height={256} src="/gifs/recycling.gif" class="w-4/5 h-auto mx-auto grayscale" alt="" />
+
+      <h3 class="text-gradient mt-8 text-2xl w-64">
+        Une solution durable
+      </h3>
+
+      <p class="text-white/50 mt-4">
+        Parce que dans un monde en constante évolution, il est important de penser à demain. Donc je m'efforce de créer des solutions qui durent dans le temps et qui sont en accord avec les enjeux actuels.
+      </p>
+
+      <button class="bg-white/[0.03] border border-white/[0.05] text-white/40 py-3 px-6 hover:text-white/60 hover:bg-white/[0.05] hover:border-white/10 transition-all duration-300 mt-6">
+        En savoir plus sur notre démarche
+      </button>
+    </div>
+
+    <div class="row-span-1 col-span-1 lg:col-start-2 bg-neutral-900 p-8 rounded-3xl flex flex-row items-center border-white/10 border opacity-50 hover:opacity-100 transition-opacity duration-500">
+      <Image width={128} height={128} src="/gifs/yoga.gif" class="h-64 w-auto" alt="" />
+
+      <div class="ml-4">
+        <h3 class="text-gradient font-medium text-2xl">
+          Une expérience utilisateur simplifiée
+        </h3>
+
+        <p class="mt-4 text-white/50">
+          Construire une expérience simplifiée et intuitive est un défi de tous les jours. C'est pourquoi je m'efforce de rendre chaque interaction la plus naturelle possible.
+        </p>
+
+        <button class="bg-white/[0.03] border border-white/[0.05] text-white/40 py-3 px-6 hover:text-white/60 hover:bg-white/[0.05] hover:border-white/10 transition-all duration-300 mt-4">
+          En savoir plus
+        </button>
+      </div>
+    </div>
+
+    <div class="lg:row-start-2 row-span-1 col-span-1 lg:col-start-2 bg-neutral-900 p-8 rounded-3xl flex flex-row items-center border border-white/10 opacity-50 hover:opacity-100 transition-opacity duration-500">
+      <Image width={128} height={128} src="/gifs/support.gif" class="h-64 w-auto" alt="" />
+
+      <div class="ml-4">
+        <h3 class="text-gradient font-medium text-2xl">
+          Un rendu aux goûts du jour
+        </h3>
+
+        <p class="mt-4 text-white/50">
+          Parce que le design est un élément clé dans la réussite d'un projet, je m'efforce de suivre les dernières tendances pour vous offrir un rendu moderne et à la pointe de la technologie.
+        </p>
+
+        <button class="bg-white/[0.03] border border-white/[0.05] text-white/40 py-3 px-6 hover:text-white/60 hover:bg-white/[0.05] hover:border-white/10 transition-all duration-300 mt-4">
+          En savoir plus
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,93 @@
+---
+import { Icon } from 'astro-icon/components';
+import { Image } from 'astro:assets';
+import { getCollection } from 'astro:content';
+
+interface Props {
+  quantity?: number;
+  isPage?: boolean;
+}
+
+const posts = (await getCollection('blog')).sort(
+	(a, b) => {
+    const timestampB = b.data.pubDate.valueOf();
+    const timestampA = a.data.pubDate.valueOf();
+
+    if (a.data.pinned && !b.data.pinned) return -1;
+    if (!a.data.pinned && b.data.pinned) return 1;
+    
+    if (timestampA < timestampB) return 1;
+    if (timestampA > timestampB) return -1;
+
+    return 0;
+  },
+)
+
+const { quantity, isPage = false } = Astro.props;
+
+const displayedPosts = posts.slice(0, quantity);
+
+const isThereMore = quantity ? posts.length > quantity : false;
+---
+
+
+<section class="max-lg:p-8">
+  <h2 class="text-gradient text-4xl max-w-xl mx-auto text-center mt-32">
+    Mes derniers articles et projets
+  </h2>
+
+  <p class="text-neutral-400/70 mt-8 text-center text-lg max-w-md mx-auto">
+    Découvrez les derniers projets sur lesquels j'ai eu l'opportunité de travailler...
+  </p>
+  
+  <div class="grid lg:grid-cols-2 gap-8 max-w-7xl mx-auto mt-16 relative">
+    {
+      isPage && 
+        <a href="/" class="text-white/50 hover:text-white/70 transition-colors duration-200 flex items-center group lg:col-span-2">
+          <Icon name="tabler:arrow-left" class="w-6 h-6 mr-2 relative left-0 group-hover:-left-1 transition-all duration-200" />
+          Retourner sur mon portfolio
+        </a>
+    }
+    {displayedPosts.map((article) => (
+      <a href={`/blog/${article.slug}/`} class="overflow-hidden relative">
+        {article.data.pinned && (
+          <span class="absolute top-4 left-4 flex items-center gap-2 border p-1.5  px-2 pr-3 border-white/10 bg-white/5">
+            <Icon name="tabler:pin" class="w-4 h-4 text-white/50" />
+
+            <span class="text-white/50 text-xs font-medium">
+              Épinglé
+            </span>
+          </span>
+        )}
+
+        <Image src={article.data.heroImage ?? '/articles/404.png'} alt={article.data.title} width={720} height={360} class=" w-full" />
+
+        <div class="p-4">
+          <h3 class="text-white/70 text-2xl font-medium">
+            {article.data.title}
+          </h3>
+
+          <span class="text-white/40 italic">
+            {article.data.pubDate.toLocaleDateString('FR-fr', {
+              month: 'long',
+              day: 'numeric',
+              year: 'numeric'
+            })}
+          </span>
+
+          <p class="text-white/50 mt-4">
+            {article.data.description}
+          </p>
+        </div>
+      </a>
+    ))}
+  </div>
+
+  {isThereMore && (
+    <div class="text-center mt-16">
+      <a href="/blog" class="bg-white/[0.03] border border-white/[0.05] text-white/40 py-3 px-6 hover:text-white/60 hover:bg-white/[0.05] hover:border-white/10 transition-all duration-300">
+        Voir plus d'articles
+      </a>
+    </div>
+  )}
+</section>
