@@ -4,6 +4,7 @@ import BaseHead from '~/components/astro/BaseHead.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 
 import { Icon } from 'astro-icon/components';
+import Footer from '~/components/Footer.astro';
 
 type Props = CollectionEntry<'blog'>['data'] & { posts: CollectionEntry<'blog'>[]; currentPost: CollectionEntry<'blog'> };
 
@@ -70,5 +71,7 @@ const latestPosts = getNearestPostsByDate(posts, currentPost).slice(0, 3);
         ))}
       </div>
     </main>
+    
+    <Footer />
 	</body>
 </html>

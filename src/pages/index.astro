@@ -7,6 +7,7 @@ import FeaturesBento from '~/components/astro/FeaturesBento.astro';
 import AboutMe from '~/components/astro/AboutMe.astro';
 import Skills from '~/components/astro/Skills.astro';
 import BlogList from '~/components/astro/BlogList.astro';
+import Footer from '~/components/Footer.astro';
 
 ---
 
@@ -15,7 +16,7 @@ import BlogList from '~/components/astro/BlogList.astro';
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
-	<body class="bg-neutral-950 pb-48">
+	<body class="bg-neutral-950">
     <Header />
 
     <Technologies />
@@ -27,5 +28,7 @@ import BlogList from '~/components/astro/BlogList.astro';
     <Skills />
 
     <BlogList quantity={4} />
+
+    <Footer />
 	</body>
 </html>

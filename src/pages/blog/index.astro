@@ -1,8 +1,8 @@
 ---
 import BaseHead from '~/components/astro/BaseHead.astro';
 import BlogList from '~/components/astro/BlogList.astro';
+import Footer from '~/components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '~/consts';
-
 ---
 
 <!doctype html>
@@ -12,5 +12,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '~/consts';
 	</head>
 	<body class="bg-neutral-950 pb-48">
     <BlogList isPage />
+    <Footer />
 	</body>
 </html>
