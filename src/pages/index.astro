@@ -1,0 +1,33 @@
+---
+import Header from '~/components/astro/Header.astro';
+import BaseHead from '~/components/astro/BaseHead.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '~/consts';
+import Technologies from '~/components/astro/Technologies.astro';
+import FeaturesBento from '~/components/astro/FeaturesBento.astro';
+import AboutMe from '~/components/astro/AboutMe.astro';
+import Skills from '~/components/astro/Skills.astro';
+import BlogList from '~/components/astro/BlogList.astro';
+
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body class="bg-neutral-950 pb-48">
+    <Header />
+
+    <Technologies />
+
+    <FeaturesBento />
+
+    <AboutMe />
+
+    <Skills />
+
+    <hr class="my-32 border-white/15">
+
+    <BlogList quantity={4} />
+	</body>
+</html>

@@ -1,0 +1,16 @@
+---
+import BaseHead from '~/components/astro/BaseHead.astro';
+import BlogList from '~/components/astro/BlogList.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '~/consts';
+
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body class="bg-neutral-950 pb-48">
+    <BlogList isPage />
+	</body>
+</html>
