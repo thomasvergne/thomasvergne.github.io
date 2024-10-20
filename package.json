@@ -1,0 +1,27 @@
+{
+  "name": "portfolio-with-blog",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/mdx": "^3.1.8",
+    "@astrojs/rss": "^4.0.9",
+    "@astrojs/sitemap": "^3.2.1",
+    "@astrojs/tailwind": "^5.1.2",
+    "@iconify-json/tabler": "^1.2.5",
+    "@tailwindcss/typography": "^0.5.15",
+    "astro": "^4.16.6",
+    "astro-icon": "^1.1.1",
+    "locomotive-scroll": "^5.0.0-beta.21",
+    "tailwind-merge": "^2.5.4",
+    "tailwindcss": "^3.4.14",
+    "typescript": "^5.6.3"
+  }
+}
