@@ -40,9 +40,9 @@ const latestPosts = getNearestPostsByDate(posts, currentPost).slice(0, 3);
         <Icon name="tabler:arrow-left" class="w-6 h-6 mr-2 relative left-0 group-hover:-left-1 transition-all duration-200" />
         Retourner sur la liste des articles
       </a>
-      <div class="flex items-center pb-12">
+      <div class="flex md:items-center pb-12 max-md:flex-col">
         <h1 class="flex-auto text-4xl text-white font-medium">{title}</h1>
-        <div class="text-white/70">
+        <div class="text-white/70 max-md:mt-4">
           <FormattedDate date={pubDate} />
           {
             updatedDate && (
@@ -54,7 +54,7 @@ const latestPosts = getNearestPostsByDate(posts, currentPost).slice(0, 3);
         </div>
       </div>
 
-      <div class="prose prose-invert prose-img:rounded-3xl w-full max-w-4xl text-justify text-white/70">
+      <div class="prose prose-invert prose-headings:!text-left prose-img:rounded-3xl w-full max-w-4xl prose-p:text-justify max-sm:prose-p:text-left text-white/70">
         <slot />
       </div>
 
