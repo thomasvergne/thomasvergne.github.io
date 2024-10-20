@@ -1,0 +1,75 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import BaseHead from '~/components/astro/BaseHead.astro';
+import FormattedDate from '../components/FormattedDate.astro';
+
+import '~/styles/article.css';
+import { Icon } from 'astro-icon/components';
+
+type Props = CollectionEntry<'blog'>['data'] & { posts: CollectionEntry<'blog'>[]; currentPost: CollectionEntry<'blog'> };
+
+const { title, description, pubDate, updatedDate, heroImage, posts, currentPost } = Astro.props;
+
+function getNearestPostsByDate(posts: CollectionEntry<'blog'>[], currentPost: CollectionEntry<'blog'>) {
+  const currentPostDate = new Date(currentPost.data.pubDate);
+  const nearestPosts = posts
+    .filter((post) => post.slug !== currentPost.slug)
+    .sort((a, b) => {
+      const dateA = new Date(a.data.pubDate);
+      const dateB = new Date(b.data.pubDate);
+      return Math.abs(dateA.getTime() - currentPostDate.getTime()) - Math.abs(dateB.getTime() - currentPostDate.getTime());
+    });
+
+  return nearestPosts.slice(0, 3);
+  
+}
+
+const latestPosts = getNearestPostsByDate(posts, currentPost).slice(0, 3);
+
+---
+
+<html lang="en">
+	<head>
+		<BaseHead title={title} description={description} image={heroImage ?? '/articles/404.png'} />
+	</head>
+
+	<body class="bg-neutral-950">
+    <main class="max-w-4xl mx-auto p-8">
+      {heroImage && <img width={1020} height={510} src={heroImage} class="w-full" alt="" />}
+      <a href="/blog" class="text-white/50 hover:text-white/70 transition-colors duration-200 flex items-center group mb-8 mt-12">
+        <Icon name="tabler:arrow-left" class="w-6 h-6 mr-2 relative left-0 group-hover:-left-1 transition-all duration-200" />
+        Retourner sur la liste des articles
+      </a>
+      <div class="flex items-center pb-12">
+        <h1 class="flex-auto text-4xl text-white font-medium">{title}</h1>
+        <div class="text-white/70">
+          <FormattedDate date={pubDate} />
+          {
+            updatedDate && (
+              <div class="last-updated-on">
+                Dernièrement mis à jour le <FormattedDate date={updatedDate} />
+              </div>
+            )
+          }
+        </div>
+      </div>
+
+      <div class="prose prose-invert w-full max-w-4xl text-justify text-white/70">
+        <slot />
+      </div>
+
+      <div class="grid lg:grid-cols-3 gap-8 my-16 lg:mt-8">
+        {latestPosts.map((post) => (
+          <a href={`/blog/${post.slug}`} class="text-white flex items-center">
+            <div class="flex-auto">
+              <h2 class="text-xl font-medium">{post.data.title}</h2>
+              <FormattedDate date={post.data.pubDate} class="text-white/70" />
+            </div>
+
+            <Icon name="tabler:arrow-right" class="w-8 h-8 ml-2" />
+          </a>
+        ))}
+      </div>
+    </main>
+	</body>
+</html>
