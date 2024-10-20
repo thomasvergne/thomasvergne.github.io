@@ -3,7 +3,6 @@ import type { CollectionEntry } from 'astro:content';
 import BaseHead from '~/components/astro/BaseHead.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 
-import '~/styles/article.css';
 import { Icon } from 'astro-icon/components';
 
 type Props = CollectionEntry<'blog'>['data'] & { posts: CollectionEntry<'blog'>[]; currentPost: CollectionEntry<'blog'> };
