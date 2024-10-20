@@ -1,0 +1,47 @@
+---
+title: "Le Don Vert"
+pubDate: '2024-10-20'
+description: 'Le don vert est un site de don de plantes entre particuliers'
+heroImage: '/articles/ledonvert.png'
+pinned: true
+---
+
+Dans un monde où le gaspillage est presque devenu normal, il est important de trouver des solutions pour réduire notre impact sur l'environnement. C'est dans cette optique que le site Le Don Vert a été créé. 
+
+Le principe est simple : permettre aux particuliers de donner des plantes qu'ils n'utilisent plus à d'autres personnes qui en ont besoin. Ainsi, les plantes ne sont pas jetées et peuvent continuer à vivre dans un nouvel environnement.
+
+Le site est entièrement gratuit et ouvert à tous. Il suffit de s'inscrire pour pouvoir donner ou recevoir des plantes. Aucune vente n'est disponible, le but est uniquement de partager et de faire vivre les plantes.
+
+## Une notion de bonté
+
+Le choix de ne pas mettre à disposition des moyens de vendre est complètement volontaire, le but étant de créer une communauté de personnes qui partagent les mêmes valeurs et qui souhaitent faire un geste pour la planète. Ainsi, les dons sont faits en toute bonté et sans contrepartie.
+
+La bonté est l'essence même du site, et c'est ce qui le rend si spécial. Les personnes qui donnent des plantes le font par amour pour la nature et pour les autres, et c'est ce qui fait toute la différence.
+
+## Une concurrence et non-concurrence à la fois
+
+Le Don Vert pourrait être considéré comme une plateforme en concurrence directe avec des grandes chaînes de distributions vertes déjà connues et bien implantées. Cependant, le site se veut complémentaire à ces dernières, en proposant une alternative plus humaine et plus respectueuse de l'environnement. 
+
+Le site ne fait en aucun cas de la concurrence pour des raisons une raison très simple : dans la même veine, il existe le site [Le Bon Coin](https://www.leboncoin.fr/) qui pourrait être un concurrent direct aux grandes marques de distributions, et pourtant, ces marques-là continuent de vivre et de prospérer. Sur ce même schéma, le Don Vert ne vise pas à créer de la concurrence et ne visera jamais qu'on le veuille ou non. 
+
+## Un design bien choisi
+
+Le design du site a été pensé pour être simple et intuitif, afin de permettre à tous de l'utiliser très facilement. Ainsi, que vous soyez expérimentés ou débutants, vous pourrez naviguer sur le site sans aucune difficulté.
+
+J'ai choisi personnellement de faire un site avec un systèm d'étape par étape pour que les utilisateurs puissent facilement donner ou recevoir des plantes. Ainsi, les boutons ont été même pensés pour être le plus intuitif possible.
+
+On s'est véritablement plongé dans l'expérience d'un utilisateur quelconque pour que le site reflète le plus possible la simplicité et l'efficacité. 
+
+## Des technologies modernes et respectueuses
+
+Nous utilisons des technologies modernes pour garantir la sécurité et la confidentialité des données de nos utilisateurs. Le fait est que nous ne vendons pas les données de nos utilisateurs, et nous ne les utilisons pas à des fins publicitaires.
+
+De plus, les technologies utilisées ont été choisies tout d'abord pour leur impact sur la phase de développement du site, mais aussi pour leur impact environnemental : [Remix](https://remix.run) permet des bundles Javascript relativement légers et donc moins énergivores, [Tailwind](https://tailwindcss.com) permet de réduire la taille des fichiers CSS en découpant par bloc les classes uniquement utilisées, évitant ainsi de charger plusieurs fois des propriétés.
+
+Bien que certaines de ces optimisations soient minimes, elles ont un impact sur la consommation énergétique du site, et c'est ce qui compte pour nous.
+
+## Conclusion
+
+Beaucoup de valeurs éthiques sont mises en avant dans le site Le Don Vert, et c'est ce qui le rend si unique. En plus de permettre de donner une seconde vie aux plantes, le site permet de créer une communauté de personnes qui partagent les mêmes valeurs et qui souhaitent faire un geste pour la planète.
+
+[Le Don Vert](https://ledonvert.org)
