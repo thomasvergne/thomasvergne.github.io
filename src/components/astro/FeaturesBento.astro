@@ -4,20 +4,20 @@ import { Image } from "astro:assets";
 
 ---
 
-<section class="max-lg:p-8">
-  <h2 class="text-gradient text-4xl max-w-lg mx-auto text-center mt-32">
+<section class="max-lg:p-8 max-sm:px-0">
+  <h2 class="text-gradient text-4xl lg:max-w-lg mx-auto text-center mt-32">
     Créer des expériences inoubliables
   </h2>
 
-  <p class="text-neutral-400/70 mt-8 text-center text-lg">
+  <p class="text-neutral-400/70 mt-8 text-center text-lg max-sm:text-base">
     Quelle est la recette magique à une expérience utilisateur réussie ?
   </p>
 
   <div class="grid lg:grid-cols-2 lg:grid-rows-2 max-w-7xl mx-auto gap-8 mt-16">
-    <div class="bg-neutral-900 p-8 rounded-3xl lg:row-span-2 border-white/10 border opacity-50 hover:opacity-100 transition-opacity duration-500">
-      <Image width={256} height={256} src="/gifs/recycling.gif" class="w-4/5 h-auto mx-auto grayscale" alt="" />
+    <div class="bg-neutral-900 p-4 lg:p-8 rounded-3xl lg:row-span-2 border-white/10 border lg:opacity-50 lg:hover:opacity-100 transition-opacity duration-500 max-sm:rounded-none max-sm:border-x-0">
+      <Image width={256} height={256} src="/gifs/recycling.gif" class="max-sm:w-32 max-sm:h-auto w-4/5 h-auto mx-auto grayscale" alt="" />
 
-      <h3 class="text-gradient mt-8 text-2xl w-64">
+      <h3 class="text-gradient mt-8 text-2xl w-64 max-sm:text-xl">
         Une solution durable
       </h3>
 
@@ -26,15 +26,15 @@ import { Image } from "astro:assets";
       </p>
 
       <button class="bg-white/[0.03] border border-white/[0.05] text-white/40 py-3 px-6 hover:text-white/60 hover:bg-white/[0.05] hover:border-white/10 transition-all duration-300 mt-6">
-        En savoir plus sur notre démarche
+        En savoir plus
       </button>
     </div>
 
-    <div class="row-span-1 col-span-1 lg:col-start-2 bg-neutral-900 p-8 rounded-3xl flex  flex-col lg:flex-row items-center border-white/10 border opacity-50 hover:opacity-100 transition-opacity duration-500">
-      <Image width={128} height={128} src="/gifs/yoga.gif" class="h-64 w-auto" alt="" />
+    <div class="row-span-1 col-span-1 lg:col-start-2 bg-neutral-900 p-4 lg:p-8 rounded-3xl flex flex-col lg:flex-row items-center border-white/10 border lg:opacity-50 lg:hover:opacity-100 transition-opacity duration-500 max-sm:rounded-none max-sm:border-x-0">
+      <Image width={128} height={128} src="/gifs/yoga.gif" class="max-sm:w-32 max-sm:h-auto h-64 w-auto" alt="" />
 
-      <div class="ml-4">
-        <h3 class="text-gradient font-medium text-2xl">
+      <div class="lg:ml-4">
+        <h3 class="text-gradient font-medium text-2xl max-sm:text-xl">
           Une expérience utilisateur simplifiée
         </h3>
 
@@ -48,11 +48,11 @@ import { Image } from "astro:assets";
       </div>
     </div>
 
-    <div class="lg:row-start-2 row-span-1 col-span-1 lg:col-start-2 bg-neutral-900 p-8 rounded-3xl flex flex-col lg:flex-row items-center border border-white/10 opacity-50 hover:opacity-100 transition-opacity duration-500">
-      <Image width={128} height={128} src="/gifs/support.gif" class="h-64 w-auto" alt="" />
+    <div class="lg:row-start-2 row-span-1 col-span-1 lg:col-start-2 bg-neutral-900 p-4 lg:p-8 rounded-3xl flex flex-col lg:flex-row items-center border border-white/10 lg:opacity-50 lg:hover:opacity-100 transition-opacity duration-500 max-sm:rounded-none max-sm:border-x-0">
+      <Image width={128} height={128} src="/gifs/support.gif" class="max-sm:w-32 max-sm:h-auto h-64 w-auto" alt="" />
 
-      <div class="ml-4">
-        <h3 class="text-gradient font-medium text-2xl">
+      <div class="lg:ml-4">
+        <h3 class="text-gradient font-medium text-2xl max-sm:text-xl">
           Un rendu aux goûts du jour
         </h3>
 

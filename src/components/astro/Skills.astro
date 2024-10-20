@@ -2,7 +2,7 @@
 import { Image } from "astro:assets";
 ---
 
-<section class="max-lg:p-8">
+<section class="max-lg:p-8 max-sm:p-0">
   <h2 class="text-gradient text-3xl font-medium text-center">
     Mon expertise
   </h2>
@@ -12,7 +12,7 @@ import { Image } from "astro:assets";
   </p>
 
   <div class="grid lg:grid-cols-2 max-w-5xl mx-auto gap-8 mt-16">
-    <article class="bg-neutral-900 p-8 border border-white/10 rounded-3xl opacity-50 hover:opacity-100 transition-opacity duration-500">
+    <article class="bg-neutral-900 p-8 border border-white/10 rounded-3xl lg:opacity-50 lg:hover:opacity-100 transition-opacity duration-500 max-sm:rounded-none max-sm:border-x-0">
       <Image src="/gifs/website.gif" alt="" width={128} height={128} class="h-80 w-auto mx-auto" />
 
       <h3 class="text-white/70 my-8 text-2xl">
@@ -24,7 +24,7 @@ import { Image } from "astro:assets";
       </p>
     </article>
 
-    <article class="bg-neutral-900 p-8 rounded-3xl border border-white/10 opacity-50 hover:opacity-100 transition-opacity duration-500">
+    <article class="bg-neutral-900 p-8 rounded-3xl border border-white/10 lg:opacity-50 lg:hover:opacity-100 transition-opacity duration-500 max-sm:rounded-none max-sm:border-x-0">
       <Image src="/gifs/language.gif" alt="" width={128} height={128} class="h-80 w-auto mx-auto" />
 
       <h3 class="text-white/70 my-8 text-2xl">
