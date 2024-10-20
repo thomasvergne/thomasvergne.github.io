@@ -30,7 +30,7 @@ const latestPosts = getNearestPostsByDate(posts, currentPost).slice(0, 3);
 
 <html lang="en">
 	<head>
-		<BaseHead title={title} description={description} image={heroImage ?? '/articles/404.png'} />
+		<BaseHead title={`Thomas Vergne - ${title}`} description={description} image={heroImage ?? '/articles/404.png'} />
 	</head>
 
 	<body class="bg-neutral-950">
@@ -54,7 +54,7 @@ const latestPosts = getNearestPostsByDate(posts, currentPost).slice(0, 3);
         </div>
       </div>
 
-      <div class="prose prose-invert w-full max-w-4xl text-justify text-white/70">
+      <div class="prose prose-invert prose-img:rounded-3xl w-full max-w-4xl text-justify text-white/70">
         <slot />
       </div>
 
@@ -71,7 +71,7 @@ const latestPosts = getNearestPostsByDate(posts, currentPost).slice(0, 3);
         ))}
       </div>
     </main>
-    
+
     <Footer />
 	</body>
 </html>
