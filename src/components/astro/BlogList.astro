@@ -2,19 +2,25 @@
 import { Icon } from 'astro-icon/components';
 import { Image } from 'astro:assets';
 import { getCollection } from 'astro:content';
+import { getAllTags } from '../tags';
 
 interface Props {
   quantity?: number;
   isPage?: boolean;
 }
 
+const capitalize = (str: string) => str.charAt(0).toUpperCase() + str.slice(1);
+
 const posts = (await getCollection('blog')).sort(
 	(a, b) => {
     const timestampB = b.data.pubDate.valueOf();
     const timestampA = a.data.pubDate.valueOf();
 
-    if (a.data.pinned && !b.data.pinned) return -1;
-    if (!a.data.pinned && b.data.pinned) return 1;
+    const pinnedA = a.data.tags.includes('pinned');
+    const pinnedB = b.data.tags.includes('pinned');
+
+    if (pinnedA && !pinnedB) return -1;
+    if (!pinnedA && pinnedB) return 1;
     
     if (timestampA < timestampB) return 1;
     if (timestampA > timestampB) return -1;
@@ -28,6 +34,8 @@ const { quantity, isPage = false } = Astro.props;
 const displayedPosts = posts.slice(0, quantity);
 
 const isThereMore = quantity ? posts.length > quantity : false;
+
+const tags = getAllTags(posts);
 ---
 
 {
@@ -47,15 +55,24 @@ const isThereMore = quantity ? posts.length > quantity : false;
   
   <div class="grid lg:grid-cols-2 gap-8 max-w-7xl mx-auto mt-16 relative">
     {
-      isPage && 
-        <a href="/" class="text-white/50 hover:text-white/70 transition-colors duration-200 flex items-center group lg:col-span-2">
+      isPage && <>
+        <a href="/" class="text-white/50 hover:text-white/70 transition-colors duration-200 flex items-center group">
           <Icon name="tabler:arrow-left" class="w-6 h-6 mr-2 relative left-0 group-hover:-left-1 transition-all duration-200" />
           Retourner sur mon portfolio
         </a>
+
+        <div class="justify-self-end text-white flex items-center gap-4">
+          {tags.map((tag) => (
+            <a href={`/blog/tags/${tag}`} class="px-3 py-1 font-medium bg-white/10 border border-white/20 rounded-full text-sm">
+              {tag === 'pinned' ? 'Épinglé' : capitalize(tag)}
+            </a>
+          ))}
+        </div>
+      </>
     }
     {displayedPosts.map((article) => (
       <a href={`/blog/${article.slug}/`} class="overflow-hidden relative">
-        {article.data.pinned && (
+        {article.data.tags.includes('pinned') && (
           <span class="absolute top-4 left-4 flex items-center gap-2 border p-1.5  px-2 pr-3 border-white/10 bg-white/5 rounded-full">
             <Icon name="tabler:pin" class="w-4 h-4 text-white/50" />
 
