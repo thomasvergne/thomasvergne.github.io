@@ -30,7 +30,7 @@ const { posts, tag } = Astro.props;
 		<BaseHead title={`Thomas Vergne - ${tag}`} description={`Liste des articles contenant le tag ${tag}.`} />
 	</head>
   <body class="bg-neutral-950">
-    <section class="max-lg:p-8" hidden={posts.length === 0}>
+    <section class="p-8" hidden={posts.length === 0}>
       <h2 class="text-gradient text-4xl max-w-xl mx-auto text-center mt-32">
         Mes derniers articles et projets
       </h2>
