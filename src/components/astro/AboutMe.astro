@@ -2,10 +2,10 @@
 import { Image } from "astro:assets";
 ---
 
-<section class="grid lg:grid-cols-2 place-items-center relative overflow-y-hidden my-32 border-y border-white/10 bg-white/[0.02] z-10 px-8">
+<section class="grid place-items-center relative overflow-y-hidden my-32 border-y border-white/10 bg-white/[0.02] z-10 px-8">
   <div class="max-w-md mx-auto py-48">
-    <Image height="128" width="128" src="/picture.png" class="size-32" alt="" />
-    <h2 class="text-gradient text-4xl max-w-lg mx-auto mt-8 text-left max-sm:text-2xl">
+    <Image height="128" width="128" src="/picture.png" class="size-32 mx-auto" alt="" />
+    <h2 class="text-gradient text-4xl max-w-lg mx-auto mt-8 max-sm:text-2xl text-center">
       Dans les coulisses
     </h2>
     
@@ -26,7 +26,5 @@ import { Image } from "astro:assets";
     </button>
   </div>
 
-  <div class="absolute max-lg:bottom-0 lg:relative lg:col-span-1 h-64 lg:h-full w-full -z-10">
-    <span class="absolute lg:right-0 lg:top-0 bottom-0 left-0 h-full w-full bg-gradient-to-l from-yellow-500 to-green-500 -z-10 blur-[200px] opacity-50"></span>
-  </div>
+  <span class="absolute top-0 left-0 h-64 w-full bg-gradient-to-l from-yellow-500 to-green-500 -z-10 blur-[200px] opacity-50"></span>
 </section>
