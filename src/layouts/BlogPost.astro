@@ -42,7 +42,7 @@ const latestPosts = getNearestPostsByDate(posts, currentPost).slice(0, 3);
       </a>
       <div class="flex md:items-center pb-12 max-md:flex-col">
         <h1 class="flex-auto text-4xl text-white font-medium">{title}</h1>
-        <div class="text-white/70 max-md:mt-4">
+        <div class="text-white/70 max-md:mt-4 w-48 text-right">
           <FormattedDate date={pubDate} />
           {
             updatedDate && (
@@ -60,9 +60,9 @@ const latestPosts = getNearestPostsByDate(posts, currentPost).slice(0, 3);
 
       <div class="grid lg:grid-cols-3 gap-8 my-16 lg:mt-8">
         {latestPosts.map((post) => (
-          <a href={`/blog/${post.slug}`} class="text-white flex items-center">
-            <div class="flex-auto">
-              <h2 class="text-xl font-medium">{post.data.title}</h2>
+          <a href={`/blog/${post.slug}`} class="text-white grid grid-cols-4 place-items-center">
+            <div class="col-span-3 justify-self-start">
+              <h2 class="text-left font-medium">{post.data.title}</h2>
               <FormattedDate date={post.data.pubDate} class="text-white/70" />
             </div>
 
