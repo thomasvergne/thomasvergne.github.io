@@ -1,0 +1,29 @@
+---
+import { Image } from "astro:assets";
+import Marquee from "./Marquee.astro";
+---
+
+<section class="bg-white/[0.03] relative border-y border-white/10 group">
+  <h3 class="text-neutral-400/70 text-center text-xl max-w-md mx-auto mt-12 group-hover:text-neutral-400 transition-all duration-500 font-medium">
+    Des projets construits avec les meilleures technologies
+  </h3>
+
+  <Marquee speed={20} class="gap-44 text-3xl uppercase items-center text-white/20 font-black *:grayscale *:opacity-50 hover:*:opacity-100 hover:*:grayscale-0 *:transition-all *:duration-500 py-16">
+    <Image width="80" height="80" class="h-20 w-auto" src="/marquee/typescript.png" alt="" />
+    <Image width="80" height="80" class="h-20 w-auto" src="/marquee/react.png" alt="" />
+    <Image width="80" height="80" class="h-20 w-auto" src="/marquee/tailwind.png" alt="" />
+    <Image width="80" height="80" class="h-20 w-auto" src="/marquee/haskell.png" alt="" />
+    <Image width="80" height="80" class="h-20 w-auto" src="/marquee/remix.png" alt="" />
+    <Image width="80" height="80" class="h-20 w-auto" src="/marquee/astro.png" alt="" />
+
+    <Image width="80" height="80" aria-hidden="true" id="first-hidden-item" class="h-20 w-auto" src="/marquee/typescript.png" alt="" />
+    <Image width="80" height="80" aria-hidden="true" class="h-20 w-auto" src="/marquee/react.png" alt="" />
+    <Image width="80" height="80" aria-hidden="true" class="h-20 w-auto" src="/marquee/tailwind.png" alt="" />
+    <Image width="80" height="80" aria-hidden="true" class="h-20 w-auto" src="/marquee/haskell.png" alt="" />
+    <Image width="80" height="80" aria-hidden="true" class="h-20 w-auto" src="/marquee/remix.png" alt="" />
+    <Image width="80" height="80" aria-hidden="true" class="h-20 w-auto" src="/marquee/astro.png" alt="" />
+  </Marquee>
+
+  <span class="h-full absolute left-0 w-48 bg-gradient-to-r from-neutral-900 to-transparent top-0"></span>
+  <span class="h-full absolute right-0 w-48 bg-gradient-to-l from-neutral-900 to-transparent top-0"></span>
+</section>

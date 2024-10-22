@@ -1,0 +1,44 @@
+---
+import { Icon } from 'astro-icon/components';
+
+interface Props {
+
+}
+
+const { } = Astro.props;
+---
+
+<script>
+  const carouselWrapper: HTMLDivElement = document.querySelector('.carousel-wrapper')!;
+  const carousel: HTMLDivElement = document.querySelector('.carousel')!;
+
+  const forwards = carouselWrapper.querySelector('#forwards')!;
+  const backwards = carouselWrapper.querySelector('#backwards')!;
+
+  forwards.addEventListener('click', () => {
+    carousel.scrollBy({
+      left: carousel.clientWidth,
+      behavior: 'smooth',
+    });
+  });
+
+  backwards.addEventListener('click', () => {
+    carousel.scrollBy({
+      left: -carousel.clientWidth,
+      behavior: 'smooth',
+    });
+  });
+</script>
+
+<div class="carousel-wrapper relative">
+  <div class="carousel flex items-center flex-nowrap *:flex-[0_0_auto] overflow-x-hidden relative">
+    <slot />
+  </div>
+  
+  <span id="forwards" class="absolute right-0 h-full top-0 transition-all duration-150 hover:bg-black/40 w-32 flex items-center justify-center group cursor-pointer">
+    <Icon name="tabler:chevron-right" class="w-12 h-12 text-white opacity-0 group-hover:opacity-100" />
+  </span>
+  <span id="backwards" class="absolute left-0 h-full top-0 transition-all duration-150 hover:bg-black/40 w-32 flex items-center justify-center group cursor-pointer">
+    <Icon name="tabler:chevron-left" class="w-12 h-12 text-white opacity-0 group-hover:opacity-100" />
+  </span>
+</div>

@@ -1,0 +1,51 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+import { cn } from '../css';
+
+interface Props extends HTMLAttributes<"div"> {
+  speed?: number;
+  direction?: 'forwards' | 'reverse';
+}
+
+const { speed = 10, direction = "forwards", class: className, ...props } = Astro.props;
+---
+
+<script>
+  const elements = document.querySelectorAll('.marquee');
+
+  elements.forEach((element) => {
+    const div = element as HTMLDivElement;
+    
+    const firstHiddenItem = div.querySelector('#first-hidden-item') as HTMLElement;
+
+    div.style.setProperty('--width', `${firstHiddenItem.offsetLeft}px`);
+  });
+</script>
+
+<div class="overflow-clip marquee" style={{
+  '--speed': `${speed}s`,
+  '--direction': direction
+}}>
+  <div {...props} class={cn("flex pl-8 gap-8 w-max marquee-track", className)}>
+    <slot />
+  </div>
+</div>
+
+<style>
+  
+.marquee-track {
+  animation: marquee-move var(--speed, 10s) linear infinite
+    var(--direction, forwards);
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee-move {
+  to {
+    transform: translateX(calc(var(--width) * -1));
+  }
+}
+
+</style>

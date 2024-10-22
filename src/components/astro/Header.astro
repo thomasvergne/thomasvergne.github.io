@@ -1,0 +1,49 @@
+---
+import { Icon } from 'astro-icon/components';
+import { Image } from 'astro:assets';
+---
+
+<header class="min-h-screen grid place-items-center relative px-8 overflow-hidden">
+  <nav class="lg:absolute top-4 w-full max-w-6xl lg:left-1/2 lg:-translate-x-1/2 mx-auto text-white grid lg:grid-cols-2 max-lg:place-items-center max-lg:gap-4">
+    <a href="mailto:contact@thomas-vergne.fr" class="flex items-center gap-4 text-white/60 text-base max-lg:flex-col hover:text-white/80 transition-all duration-150">
+      <span class="inline-flex items-center justify-center p-2 bg-white/5 border border-white/10 rounded-full text-white/50">
+        <Icon name="tabler:mail" class="w-5 h-5" />
+      </span>
+
+      contact@thomas-vergne.fr
+    </a>
+
+    <span class="flex items-center gap-2 text-white/60 text-base lg:justify-self-end max-lg:mt-4">
+      <a href="https://discordapp.com/users/766231131720646666" class="hover:text-white/80 transition-colors duration-150">Discord</a>
+      <span class="text-white/30">/</span>
+      <a href="https://www.linkedin.com/in/thomasvrgn/" class="hover:text-white/80 transition-colors duration-150">LinkedIn</a>
+      <span class="text-white/30">/</span>
+      <a href="https://github.com/thomasvergne" class="hover:text-white/80 transition-colors duration-150">GitHub</a>
+    </span>
+  </nav>
+  
+  <div class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-tr from-red-500 to-blue-500 blur-[200px] opacity-40 -z-10"></div>
+
+  <div class="max-lg:pb-32">
+    <Image
+      src="/picture.png" 
+      alt="Thomas Vergne" 
+      loading="eager"
+      width={128} height={128} 
+      class="size-32 mx-auto border-8 border-neutral-800 rounded-full"  />
+    
+    <p class="text-white/70 text-center mt-8">
+      Bonjour, je suis Thomas 👋🏻
+    </p>
+
+    <h1 class="text-4xl text-gradient text-center mt-8 max-w-lg mx-auto max-sm:text-3xl">
+      Une solution adaptée à chacun de vos besoins
+    </h1>
+    
+    <div class="text-center mt-16">
+      <a href="/blog" class="bg-white/[0.03] border border-white/[0.05] text-white/40 py-3 px-6 hover:text-white/60 hover:bg-white/[0.05] hover:border-white/10 transition-all duration-300">
+        Voir mes projets
+      </a>
+    </div>
+  </div>
+</header>

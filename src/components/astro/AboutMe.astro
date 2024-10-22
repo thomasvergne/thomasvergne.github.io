@@ -1,0 +1,30 @@
+---
+import { Image } from "astro:assets";
+---
+
+<section class="grid place-items-center relative overflow-y-hidden my-32 border-y border-white/10 bg-white/[0.02] z-10 px-8">
+  <div class="max-w-md mx-auto py-48">
+    <Image height="128" width="128" src="/picture.png" class="size-32 mx-auto" alt="" />
+    <h2 class="text-gradient text-4xl max-w-lg mx-auto mt-8 max-sm:text-2xl text-center">
+      Dans les coulisses
+    </h2>
+    
+    <h3 class="text-white/70 text-2xl font-medium my-4 text-left max-sm:text-xl">
+      Je suis Thomas Vergne,
+    </h3>
+
+    <p class="text-white/50 mt-4 text-justify max-sm:text-left">
+      Un développeur web passionné. Basé en France et actuellement étudiant en informatique, ma fascination pour les mathématiques alimente mon approche analytique et créative du développement.
+      <br><br>
+      Entre deux projets web, vous me trouverez souvent plongé dans la création de nouveaux langages de programmation, une passion qui me permet d'explorer les limites de l'innovation technologique.
+      <br><br>
+      Rejoignez-moi dans cette aventure où le code rencontre les mathématiques, et où chaque ligne écrite est une nouvelle opportunité de redéfinir ce qui est possible.
+    </p>
+
+    <button class="bg-white/[0.03] border border-white/[0.05] text-white/40 py-3 px-6 hover:text-white/60 hover:bg-white/[0.05] hover:border-white/10 transition-all duration-300 mt-6 w-full">
+      Prendre contact
+    </button>
+  </div>
+
+  <span class="absolute top-0 left-0 h-64 w-full bg-gradient-to-l from-yellow-500 to-green-500 -z-10 blur-[200px] opacity-50"></span>
+</section>

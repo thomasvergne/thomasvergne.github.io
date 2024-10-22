@@ -1,0 +1,89 @@
+---
+import { Icon } from 'astro-icon/components';
+import { Image } from 'astro:assets';
+import type { CollectionEntry } from 'astro:content';
+import { getCollection } from 'astro:content';
+import BaseHead from '~/components/astro/BaseHead.astro';
+import Footer from '~/components/Footer.astro';
+import { getAllTags } from '~/components/tags';
+
+export async function getStaticPaths() {
+	const posts = await getCollection('blog');
+
+  const tags = getAllTags(posts);
+
+	return tags.map((tag) => ({
+		params: { slug: tag },
+		props: {
+      posts: posts.filter((post) => post.data.tags.includes(tag)),
+      tag,
+    }
+	}));
+}
+
+type Props = { posts: CollectionEntry<"blog">[]; tag: string; };
+
+const { posts, tag } = Astro.props;
+---
+<html lang="fr">
+	<head>
+		<BaseHead title={`Thomas Vergne - ${tag}`} description={`Liste des articles contenant le tag ${tag}.`} />
+	</head>
+  <body class="bg-neutral-950">
+    <section class="p-8" hidden={posts.length === 0}>
+      <h2 class="text-gradient text-4xl max-w-xl mx-auto text-center mt-32">
+        Mes derniers articles et projets
+      </h2>
+    
+      <p class="text-neutral-400/70 mt-8 text-center text-lg max-w-md mx-auto">
+        Découvrez les derniers projets sur lesquels j'ai eu l'opportunité de travailler...
+      </p>
+      
+      <div class="grid lg:grid-cols-2 gap-8 max-w-7xl mx-auto mt-16 relative">
+        <a href="/blog" class="text-white/50 hover:text-white/70 transition-colors duration-200 flex items-center group lg:col-span-2">
+          <Icon name="tabler:arrow-left" class="w-6 h-6 mr-2 relative left-0 group-hover:-left-1 transition-all duration-200" />
+          Retourner sur mes articles et projets
+        </a>
+
+        <h3 class="lg:col-span-2 text-gradient font-medium text-xl">
+          Articles contenant le tag "{tag === 'pinned' ? 'épinglé' : tag}" :
+        </h3>
+
+        {posts.map((article) => (
+          <a href={`/blog/${article.slug}/`} class="overflow-hidden relative">
+            {article.data.tags.includes('pinned') && (
+              <span class="absolute top-4 left-4 flex items-center gap-2 border p-1.5  px-2 pr-3 border-white/10 bg-white/5 rounded-full">
+                <Icon name="tabler:pin" class="w-4 h-4 text-white/50" />
+    
+                <span class="text-white/50 text-xs font-medium">
+                  Épinglé
+                </span>
+              </span>
+            )}
+    
+            <Image src={article.data.heroImage ?? '/articles/404.png'} alt={article.data.title} width={720} height={360} class="w-full rounded-3xl" />
+    
+            <div class="p-4">
+              <h3 class="text-white/70 text-2xl font-medium">
+                {article.data.title}
+              </h3>
+    
+              <span class="text-white/40 italic">
+                {article.data.pubDate.toLocaleDateString('FR-fr', {
+                  month: 'long',
+                  day: 'numeric',
+                  year: 'numeric'
+                })}
+              </span>
+    
+              <p class="text-white/50 mt-4">
+                {article.data.description}
+              </p>
+            </div>
+          </a>
+        ))}
+      </div>
+    </section>
+    
+    <Footer />
+  </body>

@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.text-gradient {
+  @apply bg-gradient-to-r from-neutral-300 to-neutral-500 bg-clip-text text-transparent leading-snug font-medium;
+}
+
+@layer utilities {
+  .pause {
+    animation-play-state: paused;
+  }
+}
